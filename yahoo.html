@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="header">THIS IS JS</h2>
+    <button onclick="hello()">Click Me</button>
+    <p ondblclick="hello()">click on me</p>
+    <button onmouseenter="sum(10,20)">sum</button>
+    <div id="menu"></div>
+    <div class="divv"></div>
+    
+
+    <script>
+        let a=23
+        let b=34
+        document.write(a+b);
+        console.log(a+b);
+        console.log([3,4,5]);
+        console.table([3,4,5]);
+        console.error("something went wrong");
+        console.warn("this is just warning");
+        // console.clear();
+        console.timeEnd("test");
+        // alert("hello everybody")//pop-up
+        // alert(a+b)
+        // let c=confirm("do you like our website?");
+        // if(c){
+        //     alert("thanks");
+        // }else{
+        //     alert("bhosdik ke");
+        // }
+        // var d=prompt("what is your name ?");
+        // document.write(d);
+        function sum(a,b){
+            var e=a+b;
+            document.write(e);
+            return e
+        }
+        var f=sum(20,30)
+        document.write("sum=",f);
+        //EVENTS//
+        function hello(){
+            document.write("hello Everyone");
+        }
+        //multi arr
+        var arr=[["harry",18,"male","bcom"],["sunny",19,"male","bca"],["sara",18,"female","btech"]];
+        for(var i=0;i<3;i++)
+        {
+            document.write("<br>"+arr[i]);
+        }
+        var ar=["sanjay","anand","rehman","karan"];
+        ar.sort();
+        document.write("<br>"+ar);  //sorting method
+        ar.reverse();
+        document.write("<br>"+ar);
+        ar.pop();  //last index deleted "anand"
+        ar.push("Rahul");  //insert at 1st index
+        ar.shift();        //1st index deleted
+        document.write("<br>61"+ar);
+        var array=["sam",12,"rima"];
+        var ar1=ar.concat(array);  //merging of two array
+        document.write("<br>64"+ar1);  
+        var array1=["suman","kiran",12.5];
+        document.write("<br>66"+ar.concat(array,array1));//merge 3array
+        document.write("<br>67",array1.join("/")); //converted into string
+        document.write(" --type of "+typeof(array1.join("/")));
+        document.write("<br>69"+ar1.slice(1,4)); //print index 1,2,3 only
+        document.write("<br>70"+ar1.splice(2,1,"anni","dev"));//*
+        var arr2=Array.isArray(ar1);//check array are or are not
+        document.write("<br>72"+arr2);
+        var rr=90;
+        document.write("<br>74"+Array.isArray(rr));
+        var arr3=[2,"ram",3,"rubi","rani","smita"];
+        document.write("<br>76-"+arr3);
+        //indexof help in finding index of array//return""-1"when value are not find
+        document.write("<br>78-"+arr3.indexOf("smita")+", "+arr3.indexOf(3)+" "+arr3.indexOf("rubi",4));
+        document.write("<br>79-"+arr3.lastIndexOf("smita")+" "+arr3.lastIndexOf(3)+" "+arr3.lastIndexOf("rubi"));
+        document.write("<br>80-"+arr3.includes("smita")+" "+arr.includes("SMITA"));//true or false
+        //dum hai//ek bhi array me condition ko satisfy krta hai to true nhi to false
+        var ages=[10,13,18,20,22,15,17];
+        document.write("<br>82-"+ages);
+        var bb=ages.some(checkadult);
+        document.write("<br>85-"+bb);
+        function checkadult(age){
+            return age>=18;
+        }
+        //every//all present element in array stisfy the condition then true otherwise false
+        document.write("<br>90-"+ages.every(checkevery));
+        function checkevery(age){
+            return age>=10;
+        }
+        //in array print 1st satisfy element
+        document.write("<br>95-"+ages.find(findfun));
+        function findfun(age){
+            return age>=19;
+        }
+        //in array print location of 1st satisfy element
+        document.write("<br>100-"+ages.findIndex(ffind));
+        function ffind(age){
+            return age>=14;
+        }
+        //satisfy element in array create new array By filter
+        document.write("<br>105-"+ages.filter(adult));
+        function adult(age){
+            return age>=18;
+        }
+        //to string converted in string
+        document.write("<br>110-"+ages.toString()+typeof(ages));
+        //valueof also default value
+        //"fill"remove and new element insert
+        var arr4=["ramesh","soni","situ","smita"];
+        document.write("<br>114-"+arr4);
+        // document.write("<br>115-"+arr4.fill("ram"));
+        //while loop,do/while loop,for loop,forEach loop,for/in loop
+        //element print one by one with index also
+        arr4.forEach(function(value){
+            document.write("<br>119-"+value);
+        });
+        arr4.forEach(function(value,index){
+            document.write("<br>122-"+index+":"+value);
+
+        });
+        //also write like that format
+        arr4.forEach(loop);
+        function loop(value,index){
+            document.write("<br>128-"+index+":"+value);
+        }
+        //object//object//
+        //in object indexes are name and {} and array index like 0,1,2..[]
+        var obj={
+            fname:'nidhi',
+            lname:"tiwari",   //also use array inside object
+            age:22,
+            phone:884988,
+            arry:['sunny','bobby','ajju','biru'],
+            salary:function(){    //function also write inside
+                var aa=12;
+                var cc=21;
+                return aa+cc;
+            },
+            fullname:function(){
+                return this.fname+" "+this.lname;  //this works like recogniser
+            },
+            obj2:{
+                city:'delhi',
+                cont:'india'
+            }
+
+        }
+        
+        // document.write(obj);    //wrong printting method
+        console.log(obj);
+        document.write("<br>156-"+obj.fname+" "+obj.age+" >"+obj.arry);    //object print in document
+        document.write("<br>157-"+obj.salary());
+        document.write("<br>158-"+obj.fullname());
+        document.write("<br>159-"+obj.obj2.city);
+        //2nd method
+        var person=new Object();
+        person.firstname='RAM';
+        person.lname="kumar";
+        person.age=34;
+        document.write("<br>164-"+person.age);
+        //object in array
+        var student=[
+            {name:"ram",age:23},
+            {name:'karan',age:12},
+            {name:'rahul',age:43},
+        ];
+        console.log(student);
+        // for(var i=0;i<student.length;a++){
+        //     document.write(student[i].name);
+        // }
+
+        //const data type cannot assigned 2nd time but modify
+        const at={
+            name:'smita',
+            lname:'tiwari',
+            age:23,
+        }
+        at.name="nidhi";
+        at.lname='agrawal';
+        document.write("<br>184-"+at.name+" "+at.lname);
+        //object print all element by single step
+        //use for/in loop
+        var ob3={
+            fname:'anand',
+            lname:'yadav',
+            age:20,
+            state:'up',
+        }
+        for(j in ob3){
+            document.write("<br>194-"+j+" : "+ob3[j]);
+        }
+        //array properties
+        var arrr=[
+            {fname:'smita',lname:'tiwari'},
+            {fname:'anand',lname:'yadav'},
+            {fname:'nidhi',lname:'agrawal'},
+        ];
+        var ab=arrr.map(test);
+        document.write("<br>203-"+ab);
+        function test(x){
+            return x.fname+" "+x.lname;
+        }
+        ////string//string///method
+        ////string//string///method
+        var str="javascript is a great is launguage";
+        document.write("<br>210-"+str+"--len= "+str.length); //length
+        document.write("<br>211-"+str.toLowerCase()); //toLowerCase()
+        document.write("<br>212-"+str.toUpperCase());
+        document.write("<br>213-"+str.includes("great"));  //case sensitive find string true or false
+        document.write("<br>214-"+str.startsWith("java")+" "+str.startsWith("jat")); //match from start
+        document.write("<br>215-"+str.endsWith("age")+" "+str.endsWith("laun"));
+        document.write("<br>216-"+str.search("is"));  //find index
+        document.write("<br>217-"+str.match(/is/g));  //match and gives array format
+        document.write("<br>218-"+str.indexOf("great"));
+        document.write("<br>219-"+str.lastIndexOf("great"));
+        document.write("<br>220-"+str.replace("great","nice"));   //replace
+        var str1="          javascript pp    ";
+        // alert(str1);   //space remove from alert
+        // alert(str1.trim());  //remove here
+        document.write("<br>224-"+str.charAt(1));  //value at 1 index
+        document.write("<br>225"+str.charCodeAt(1));  //skycode find
+        document.write("<br>226-"+String.fromCharCode(97)); //find symbol through skycode
+        document.write("<br>227-"+str.concat(str1));     //concat"add" two string
+        document.write("<br>210-"+str.split(" "));   //split which place have space ///" "space replace with comma
+        document.write("<br>229-"+str.split("a"));   //split which place have "a"//a replace with comma
+        document.write("<br>230-"+str.repeat(2));    //string repeat 2 times
+        document.write("<br>231-"+str.slice(3)+" -->>"+str.slice(1,5)+"-->>"+str.slice(-2));  //string print from index 1 to five
+        document.write("<br>232-"+str.substr(3)+"-->>"+str.substr(1,5));
+        document.write("<br>233-"+str.substring(3)+"-->>"+str.substring(1,5));  //same like slice
+        var str2=50;
+        document.write("<br>235-"+str2.toString()+20);  //tostring converted string
+        document.write("<br>210-"+str.valueOf());   //default value
+        ///number method//number
+        ///number method//number
+        var str3="99";
+        var num=Number(str3);   //string converted to number
+        document.write("<br>241-"+typeof(str3)+"-->>"+(num+11));
+        var log=false;
+        var num1=Number(log);
+        document.write("<br>244-"+typeof(log)+"-->>"+num1);
+        var n=10.5766;
+        var n2="10"
+        document.write("<br>246-"+parseInt(n));   //value return in int
+        document.write("<br>248-"+parseFloat(n));  //value return in float
+        document.write("<br>248-"+isFinite(n)+" "+isFinite(n2));  //number or in "number" then true otherwise false
+        document.write("<br>250-"+Number.isInteger(n2));   //if value is integer then print true otherwises false
+        document.write("<br>251-"+n.toFixed(2));    //2 decimal nearest value
+        document.write("<br>252-"+n.toPrecision(3));  //like
+
+        //math method //math method//
+        //math//math;
+        var o=2.6;
+        var m=Math.ceil(o);
+        document.write("<br>258-"+m);  //uperbound 2.3=3
+        var m1=Math.floor(o);
+        document.write("<br>260-"+m1);  //lowerbound 2.3=2
+        document.write("<br>261-"+Math.round(o));   //uper integer//2.6=3,2.3=2
+        document.write("<br>262-"+Math.trunc(o));   //remove after decimal
+        document.write("<br>263-"+Math.max(3,5,7,6,4));
+        document.write("<br>264-"+Math.min(3,5,7,6,4));  //min num find
+        document.write("<br>265-"+Math.sqrt(9));  //square root
+        document.write("<br>266-"+Math.cbrt(64));
+        document.write("<br>267-"+Math.pow(4,3));  
+        document.write("<br>268-"+Math.random());  //by defaul 0-1 random value genreted
+        document.write("<br>269-"+Math.floor(Math.random()*10 +1));  //print 1-10 randamly
+        document.write("<br>270-"+Math.abs(5.25));   //value print
+        
+        document.write("<br>271-"+Math.PI);
+        //DATE METHOD//DATE
+        var now=new Date();
+        document.write("<br>274-"+now);
+        document.write("<br>275-"+now.toDateString());    //in format
+        document.write("<br>276-"+now.getDate());
+        document.write("<br>277-"+now.getFullYear());
+        document.write("<br>278-"+now.getMonth());     //january for 000
+        document.write("<br>279-"+now.getDay());
+        var pre=new Date('April 14 2000');    //birthday on friday
+        document.write("<br>281-"+pre.getDay());
+        document.write("<br>274-"+now.getHours()+"--> "+now.getMinutes()+"-->"+now.getSeconds());
+        now.setDate(20);  //20 ka date 
+        document.write("<br>283-"+now);
+        now.setFullYear(2023);
+        document.write("<br>-"+now);
+        //DOM//DOCUMENT OBJECT MODULE//
+        //DOM//DOCUMENT OBJECT MODULE//
+        //GET/SET/NEW ELELMENT ADD//OR OLD HTML DELETE
+        //TARGET//"ID"//"BY CLASS"//"BY TAGNAME"
+        var element;
+        element=document.all;    //html ka item le skte hai
+        console.log(element);
+        var idf=document.getElementById("menu");
+        console.log(idf);
+        //DOM GET METHODS//
+        //1.. innerText,innerHTML
+        //2.. getAttribute,getAttributNode,Attributes
+
+
+
+        //querySelector    document.querySelector(css selector)
+        //querySelectorAll  document.querySelectorAll(css selector)
+
+
+        //DOM  css styling methods
+        //1 style 2.classname 3.classlist      get and set
+        document.querySelector(".header").style.backgroundColor="red";
+        var element=document.querySelector(".header").className="abc";    //change class name
+        console.log(element);
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

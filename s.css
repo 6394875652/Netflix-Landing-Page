@@ -1,0 +1,37 @@
+body{
+    background-color: white;
+}
+/* specific paragraph ke liye */
+.para2{
+    color: blue;  
+}
+.para3{
+    color: red;
+}
+#para4{
+    color: yellow
+}
+#para5{
+    color: pink
+}
+
+/* combinator use */
+.parent1 p{
+    color: blueviolet;
+}
+p ~ span{
+    color: aqua;
+}
+/* button feature */
+buton{
+    background-color: white;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+.box p::first-letter{
+    font-size: 40px;
+    color: red;
+
+}

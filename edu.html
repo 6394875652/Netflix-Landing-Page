@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="edu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <h1>Edu.<span>point</span></h1>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">Contact Us</a></li>
+
+        </ul>
+        <div class="rightnav">
+            <button class="log-btn" onclick="showlogin()">Login</button>
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+    </nav>
+
+    <section class="background firstSection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <h1 class="online">Online<span></span></h1>
+                <h1>Learning Plateform<span></span></h1>
+                
+                <p class="text-small">The Futuer of Education is here dfgnoid dbnd jnvkd dfgn
+                    fdkjb fndkjn snfi fnd .nfvio sjfnu jbnffksb sjbfiu sbfiu jbfiwu sbfiuw abfwiu bfiwu wbfuw
+                    fkjuif sjfnk snfku snfkj snfnkj 
+                    fnkjfne xjvndg skfniuf skjfnk sjnfk snfkn sfn nvdnkd kjbdwui mdfkjwb  dwbkj a  fn sbcksj snbsd b cbsb cbsjb dbvndd
+                </p>
+                <div class="buttons">
+                    <button class="btn">Subscribe</button>
+                    <button class="btn">Watch Video</button>
+                </div>
+            </div>
+            <div class="secondHalf">
+                <img src="bookedu.jpg" alt="book image">
+
+            </div>
+        </div>
+        <div class="login">
+            <span class="remove" onclick="removelogin()">&times</span>
+            <h1 class="log">Login</h1>
+            <div class="input-log">
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="input-log">
+                <input type="password" placeholder="password">
+            </div>
+            <div class="reg">
+                <a href="#">Forgot password</a>
+                <a href="#" onclick="showregi()">Register</a>
+            </div>
+            <button class="sub">Submit</button>
+        </div>
+        <div class="Register">
+            <span class="remove" onclick="removereg()">&times</span>
+            <h1 class="log">Register</h1>
+            <div class="input-log">
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="input-log">
+                <input type="password" placeholder="password">
+            </div>
+            <div class="input-log">
+                <input type="password" placeholder="confirm password">
+            </div>
+            
+            <button class="sub">Submit</button>
+        </div>
+    </section>
+    <div class="footer">
+        <h1 class="foot">Join on Us</h1>
+        <div class="foot_container">
+            <div class="tele">
+                <a href="#" class="fa fa-instagram"></a>
+                <h2>instagram</h2>
+    
+            </div>
+            <div class="tele">
+                <a href="#" class="fa fa-twitter"> </a>
+                <h2>twitter</h2>
+    
+            </div>
+            <div class="tele">
+                <a href="#" class="fa fa-facebook"></a> 
+                <h2>facebook</h2>
+    
+            </div>
+            <div class="tele">
+                <a href="#" class="fa fa-linkedin"></a>  
+                <h2>LindIn</h2>
+    
+            </div>
+        </div>
+        <div class="foot_l">
+            <h2>Reach out to us</h2>
+            <p>Get your questions answered about learning with us.</p>
+            <h3>CALL-+918890897786</h3>
+
+        </div>
+    </div>
+</body>
+<script>
+    function showlogin(){
+        document.querySelector('.login').classList.add('showlogin');
+    }
+    function removelogin(){
+        document.querySelector('.login').classList.remove('showlogin');
+    }
+    function showregi(){
+        document.querySelector('.Register').classList.add('showregister');
+        document.querySelector('.login').classList.remove('showlogin');
+    }
+    function removereg(){
+        document.querySelector('.Register').classList.remove('showregister');
+    }
+    
+</script>
+</html>

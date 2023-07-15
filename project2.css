@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    background-color: black;
+}
+.center{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.ring{
+    position: absolute;
+    /* center me aa jayega nichre se */
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    animation: ring 1s linear infinite;
+}
+@keyframes ring{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 2px 10px 4px #e65c00;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 2px 10px 4px #18b201;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 2px 10px 4px #0456c8;
+    }
+}
+.ring::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 5px rbga(255 255 255 0.3);
+
+
+}
+span{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial;
+    letter-spacing: 1px;
+    line-height: 200px;
+    animation: text 1s ease-in-out infinite;
+}
+@keyframes text{
+    50%{
+        color: black;
+    }
+}
+.left{
+    height: 200px;
+    width: 200px;
+    margin-left: 200px;
+    margin-top: -465px;
+    text-align: center;
+}
+.right{
+    height: 200px;
+    width: 200px;
+    margin-left: 450px;
+    margin-top: -465px;
+    text-align: center;
+
+}

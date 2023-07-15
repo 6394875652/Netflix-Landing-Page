@@ -1,0 +1,14 @@
+p{
+    font-family: anand yadv;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+    /* rem relative font size krta h */
+    /* text-align: center; */
+    margin: 0 auto;
+    /* margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; */
+    width: 500px;
+}

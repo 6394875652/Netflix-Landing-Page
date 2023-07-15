@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    height: 800px;
+    width: 100%;
+    background-image: linear-gradient(to bottom right,red,yellow);
+}
+.mm{
+    background-color: white;
+    height: 450px;
+    width: 400px;
+    margin-top: -625px;
+    margin-left: 40%;
+    border: 1px solid white;
+    border-radius: 15px;
+    
+    
+}
+h1{
+    text-align: center;
+    font-family: Arial;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+    
+}
+::placeholder{
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+
+
+}
+.mm input{
+    width: 200px;
+    height: 25px;
+    font-family: Arial;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    margin-left: 100px;
+    border-top: white;
+    border-left: white;
+    border-right: 2px solid white;
+}
+a{
+    margin-left: 100px;
+    margin-top: 100px;
+    text-decoration: none;
+}
+a:hover{
+    color: orange;
+}
+.btn{
+    width: 300px;
+    height: 50px;
+    background-color: blue;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-top: 30px;
+    border: 2px solid blue;
+    border-radius: 25px;
+
+
+
+}
+.btn a{
+    font-size: 20px;
+    color: white;
+    font-family: Arial;
+    margin-left: 20px;
+
+}
+.btn:focus{
+    outline: none;
+}
+.btn:hover{
+   background-color: orange;
+}
+.mm .para{
+    margin-left: 102px;
+    margin-top: 20px;
+}
