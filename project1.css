@@ -6,6 +6,7 @@
     height: 800px;
     width: 100%;
     background-image: linear-gradient(to bottom right,red,yellow);
+    
 }
 .mm{
     background-color: white;
@@ -15,6 +16,7 @@
     margin-left: 40%;
     border: 1px solid white;
     border-radius: 15px;
+
     
     
 }

@@ -24,6 +24,9 @@ a{
     background-size: cover;
     background-position: top center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #hero:after{
     position: absolute;

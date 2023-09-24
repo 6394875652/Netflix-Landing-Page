@@ -224,3 +224,113 @@
 // console.log(nam);
 // let myname='`anand`'.padStart(8); 
 // console.log(myname);
+
+
+
+
+///////************************************************************/
+
+/////-------------    ADVANCED JAVASCRIPT------------        *//////
+
+///*****************************************************************/
+
+
+////----1-EVENT PROPOGATION----
+//-----EVENT BUBBLING AND EVENT CAPTURING 
+
+// const parentt=document.querySelector('.parent1');
+// const childd=document.querySelector('.child1');
+
+// const parentcall=()=>{
+//   alert('parent div call');
+// }
+// const childdcall=()=>{
+//   alert('child div call');
+  // event.stopPropagation();
+// }
+// parentt.addEventListener('click',parentcall,true);
+// childd.addEventListener('click',childdcall,true);
+
+// --------if you want to capturing then you must write true in both enent
+
+
+
+
+///----------------------CALLBACK FUNCTION---------------------/////
+//WE NEED TO CEATE A CALCULtor
+// const add=(a,b)=>{
+//   return a+b;
+// }
+// const subs=(a,b)=>{
+//   return Math.abs(a-b);
+// }
+// const mult=(a,b)=>{
+//   return a*b;
+// }
+// const div=(a,b)=>{
+//   return a/b;
+// }
+// const calculator=(a,b,operator)=>{
+//   return operator(a,b);
+// }
+
+// console.log(calculator(5,3,add));
+
+
+
+
+//-----------------------2--ASYNCHRON0US PROGRAMMING----------------///
+// LEXICAL SCOPING--A INNER FUNCTION CAN GET OUTER DEFINE FUNCTION BUT A OUTER FUNCTION CANNOT GET INNER FUNCTION
+
+
+//---======-----    CLOSURE IN JAVASCRIPT----------
+// const outerFun=(a)=>{
+//   let b=10;
+//   const innerFun=()=>{
+//     let sum=a+b;
+//     console.log(`the sum of two no is ${sum}`);
+//   }
+//   innerFun();
+// }
+// outerFun(5);
+
+// const outerFun=(a)=>{
+//   let b=10;
+//   const innerFun=()=>{
+//     let sum=a+b;
+//     console.log(`the sum of two no is ${sum}`);
+//   }
+//   return innerFun;
+// }
+// let check=outerFun(5);
+//  console.log(check());
+
+
+
+//---------------JAVASCRIPT THE EVENT LOOP----------//
+
+
+
+
+//-----fuction currying-------//
+// Sum(5)(3)(8)    
+
+// function Sum(num1){
+//   console.log(num1);
+//   return function(num2){
+//    console.log(num2);
+//     return function(num3){
+//       console.log(num1+num2+num3);
+//     }
+//   }
+
+// }
+
+//2nd method
+// const Sum=(num1)=>(num2)=>(num3)=>console.log(num1+num2+num3);
+// Sum(5)(3)(8);
+
+
+
+
+//-----------AJAX CALL REQUEST USING XTML REQUEST---------//

@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 1005;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.parent1{
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    cursor: pointer;
+}
+.child1{
+    width: 45%;
+    height: 18vh;
+    background-color: blue;
+    cursor: pointer;
+
+}
